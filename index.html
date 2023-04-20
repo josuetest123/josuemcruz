@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-TQ0SZYL5LS"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+       
+	  gtag('config', 'G-TQ0SZYL5LS');
+
+	</script>
+	<script>
+	function gtag_report_conversion(url) {
+	  var callback = function () {
+	    if (typeof(url) != 'undefined') {
+	      window.location = url;
+	    }
+	  };
+	  gtag('event', 'conversion', {
+	      'send_to': 'G-8QEEGBM5X2',
+	      'transaction_id': '',
+	      'event_callback': callback
+	  });
+	  return false;
+	}
+	</script>
+	<title>Test site</title>
+</head>
+<body>
+:)
+<button onclick="gtag('event', 'purchase', {
+		  'event_label': 'purchase',
+		  'event_action': 'purchase'
+		});">Purchase event</button>
+<button onclick="gtag('event', 'booking made', {
+		  'event_label': 'TestEventLabelBooking',
+		  'event_category': 'EnhancedEcommerce',
+		  'event_action': 'Booking Made'
+		});">Booking event</button>
+	<button onclick="gtag('event', 'form_submit', {
+		  'event_label': 'TestEventLabelFormSubmit',
+		  'event_category': 'EnhancedEcommerce'
+		});">Form submit event</button>
+<form action="/submit-page.html" method="post">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" value="John"><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+  <input type="submit" value="Submit">
+</form>
+</body>
+</html>
